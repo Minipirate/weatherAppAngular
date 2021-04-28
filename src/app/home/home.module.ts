@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { AppComponent } from '../app.component';
 
 
 
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
   ],
   exports: [
     HomeComponent
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class HomeModule { }
