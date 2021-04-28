@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeQualityAirModule } from './home-quality-air/home-quality-air.module';
 
 
 @NgModule({
@@ -12,8 +11,7 @@ import { HomeQualityAirModule } from './home-quality-air/home-quality-air.module
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HomeQualityAirModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
