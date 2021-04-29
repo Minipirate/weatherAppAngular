@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from '../app.component';
+import { WeatherModule } from './weather/weather.module';
+import { QualityAirModule } from './quality-air/quality-air.module';
 
 
 
@@ -10,7 +12,9 @@ import { AppComponent } from '../app.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    WeatherModule,
+    QualityAirModule
   ],
   exports: [
     HomeComponent
