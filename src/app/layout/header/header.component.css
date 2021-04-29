@@ -1,6 +1,30 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.navEffects{
+ transition: color 0.4s;
+}
+
+.navEffects:hover{
+    color: rgb(47, 145, 236);
+}
+
+.navSpacing{
+    margin: 0px 0 0 15px;
+}
+
+.liSpacing{
+    padding: 0% 0 0 0;
+}
+
+.activeLink{
+    color : rgb(92, 138, 184);
+}
 
 .linkVisual {
-    border-left: solid blue 3px;
+    border-left: solid rgb(150, 195, 236) 3px;
 }
 
 .spaceBeetweenLink{

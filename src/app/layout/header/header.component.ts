@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isActive : any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  Activate(active : string){
+    this.isActive = active
+
   }
 
 }
