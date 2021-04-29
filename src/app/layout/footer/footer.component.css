@@ -1,0 +1,17 @@
+.footerBackground{
+    background-color: rgba(150, 195, 236);
+    align-items : center;
+}
+
+.textPos {
+    margin-block: auto;
+}
+
+.linkCredential{
+    color: black;
+    text-decoration: none;
+}
+
+.footerSpacing{
+    min-height: 100px;
+}
