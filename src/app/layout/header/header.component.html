@@ -14,7 +14,7 @@
                     [ngClass]="{'activeLink' : isActive.indexOf('quality') != -1}">Qualité de l'air</a>
             </li>
             <li class="liSpacing linkVisual spaceBeetweenLink">
-                <a class="navSpacing navEffects" href="#" (click)="Activate('forum')"
+                <a class="navSpacing navEffects" routerLink="/forum" (click)="Activate('forum')"
                     [ngClass]="{'activeLink' : isActive.indexOf('forum') != -1}">Forum</a>
             </li>
             <li class="liSpacing linkVisual spaceBeetweenLink">

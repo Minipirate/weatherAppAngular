@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
+import { ForumModule } from './forum/forum.module';
+import { HeadingCreateModule } from './heading-create/heading-create.module';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { HomeModule } from './home/home.module';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     LayoutModule,
-    BrowserAnimationsModule,
-    HomeModule
+    HomeModule,
+    ForumModule,
+    HeadingCreateModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

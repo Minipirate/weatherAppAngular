@@ -20,7 +20,8 @@ a{
 }
 
 .activeLink{
-    color : rgb(92, 138, 184);
+  /*  color : rgb(92, 138, 184);*/
+  color: rgb(187, 136, 16);
 }
 
 .linkVisual {
