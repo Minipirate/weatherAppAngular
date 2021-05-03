@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
+import { Heading } from 'src/app/model/forum/heading';
+import { HeadingService } from 'src/app/services/forum/heading.service';
 
 @Component({
   selector: 'app-heading-delete',
@@ -8,8 +11,9 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./heading-delete.component.css']
 })
 export class HeadingDeleteComponent implements OnInit {
+  @Input() heading : any = {} as Heading
 
-  constructor(private modale: NgbActiveModal, private toastr: ToastrService) { }
+  constructor(private headingService : HeadingService,private modale: NgbActiveModal, private toastr: ToastrService,private activateRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -18,8 +22,10 @@ export class HeadingDeleteComponent implements OnInit {
     this.modale.dismiss()
   }
 
-  deleteHeading() {
+  deleteHeading(heading : Heading) {
+    this.headingService.delete(heading).subscribe(res =>{
+    })
     this.toastr.success("La supréssion de votre rubrique s'est bien déroulé", "Suppréssion validé");
-    this.modale.dismiss()
+    this.modale.close()
   }
 }

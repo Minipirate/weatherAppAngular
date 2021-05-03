@@ -9,11 +9,12 @@ import { HeadingEditComponent } from './heading-edit/heading-edit/heading-edit.c
 const routes: Routes = [
       // ----- HOME -----
   {path: 'home', component: HomeComponent},
-      // ----- FORUM ----- //
+      // ----- FORUM ----- 
   {path: 'forum', component: ForumComponent},
   {path: 'forum/heading/add', component: HeadingCreateComponent},
-  {path: 'forum/heading/edit', component: HeadingEditComponent},
-  
+  {path: 'forum/heading/edit/:id', component: HeadingEditComponent},
+
+      // -----REDIRECTION-----
   {path: '**', component: HomeComponent}
 ];
 

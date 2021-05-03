@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
 import { ForumModule } from './forum/forum.module';
 import { HeadingCreateModule } from './heading-create/heading-create.module';
+import { HttpClientModule } from '@angular/common/http';
+import { HeadingEditModule } from './heading-edit/heading-edit.module';
 
 
 @NgModule({
@@ -17,10 +19,12 @@ import { HeadingCreateModule } from './heading-create/heading-create.module';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    HttpClientModule,
     LayoutModule,
     HomeModule,
     ForumModule,
     HeadingCreateModule,
+    HeadingEditModule,
     BrowserAnimationsModule
   ],
   providers: [],

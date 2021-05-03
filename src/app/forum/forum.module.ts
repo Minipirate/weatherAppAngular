@@ -5,10 +5,6 @@ import { HeadinglistComponent } from './headinglist/headinglist.component';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 
-
-
-
-
 @NgModule({
   declarations: [
     ForumComponent,
