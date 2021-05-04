@@ -13,47 +13,9 @@ h5 {
     height: 20em;
 }
 
-.map {
-    background-color: green;
-    height: 20em;
-}
-
-.card-top {
-    background-color: #55a630;
-    height: 5em;
-    padding: 0.25em;
-    text-align: center;
-}
-
-.indice, .IQA, .data-bottom {
-    text-align: center;
-}
-
-.text-card {
-    font-size: medium;
-}
-
-.indice-ecrit {
-    margin-top: 0.5em;
-    font-weight: bold;
-}
-
  .highest-polluant {
      background-color: white;
      border-radius: 0.3em;
      font-size: small;
      margin-top: 1.25em;
- }
-
- .data-bottom {
-     margin: 1em;
-     font-size: small;
- }
-
- .card-group {
-    width: 100%;  
- }
-
- .indicator-top {
-     margin-bottom: 1em;
  }

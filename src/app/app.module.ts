@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
+import { QualityAirAtHomeModule } from './quality-air-at-home/quality-air-at-home.module';
+import { WeatherTodayModule } from './weather-today/weather-today.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     LayoutModule,
     BrowserAnimationsModule,
-    HomeModule
+    HomeModule,
+    QualityAirAtHomeModule,
+    WeatherTodayModule
   ],
   providers: [],
   bootstrap: [AppComponent]

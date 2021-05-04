@@ -1,76 +1,107 @@
 <div class="container-fluid">
-    <div class="mapIndicator">
-        <div class="row" style="margin-bottom: 1em;">
-            <div class="col-md-3">
-                <h5>Meteo et Qualite de l'air chez moi</h5>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary">Voir plus</button>
-            </div>
-            <div class="col-md-4" style="text-align: right; padding: 0px">
-                <p>Londres - Jeudi 18/03/2020 a 15h00</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="indicator">
-                    <div class="row">
-                        <app-card-weather></app-card-weather>
-                    </div>
-                    <div class="row">
-                        <div class="card" style="width: 7rem; margin: 0.5em; border-radius: 0.2em;">
-                            <div style="text-align: center;">
-                                <p style="font-weight: bold">jeudi</p>
-                                <div style="margin: 1em; background-color: green; border-radius: 0.2em; color: white; font-weight: bold;">
-                                    <p>9</p> 
-                                </div>
-                                <div>
-                                    <i class="fa fa-cloud" aria-hidden="true"></i>
-                                    <div>
-                                        <p>5 C</p>
-                                        <p>12 C</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 7rem; margin: 0.5em; border-radius: 0.2em;">
-                            <div style="text-align: center;">
-                                <p style="font-weight: bold">Vendredi</p>
-                                <div style="margin: 1em; background-color: green; border-radius: 0.2em; color: white; font-weight: bold;">
-                                    <p>7</p> 
-                                </div>
-                                <div>
-                                    <i class="fa fa-cloud" aria-hidden="true"></i>
-                                    <div>
-                                        <p>5 C</p>
-                                        <p>12 C</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 7rem; margin: 0.5em; border-radius: 0.2em;">
-                            <div style="text-align: center;">
-                                <p style="font-weight: bold">Samedi</p>
-                                <div style="margin: 1em; background-color: green; border-radius: 0.2em; color: white; font-weight: bold;">
-                                    <p>10</p> 
-                                </div>
-                                <div>
-                                    <i class="fa fa-cloud" aria-hidden="true"></i>
-                                    <div>
-                                        <p>5 C</p>
-                                        <p>12 C</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="map">
-                   <h1>TODO : Carte leaflet</h1> 
-                </div>
-            </div>
-        </div>
+  <div class="mapIndicator">
+    <div class="row" style="margin-bottom: 1em">
+      <div class="col-md-3">
+        <h5>Meteo et Qualite de l'air chez moi</h5>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-primary">Voir plus</button>
+      </div>
+      <div class="col-md-4" style="text-align: right; padding: 0px">
+        <p>Londres - Jeudi 18/03/2020 a 15h00</p>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="indicator">
+          <div class="row">
+            <app-card-weather></app-card-weather>
+          </div>
+          <div class="row">
+            <div
+              class="card"
+              style="width: 7rem; margin: 0.5em; border-radius: 0.2em"
+            >
+              <div style="text-align: center">
+                <p style="font-weight: bold">jeudi</p>
+                <div
+                  style="
+                    margin: 1em;
+                    background-color: green;
+                    border-radius: 0.2em;
+                    color: white;
+                    font-weight: bold; 
+                  "
+                >
+                  <p>9</p>
+                </div>
+                <div>
+                  <i class="fa fa-cloud" aria-hidden="true"></i>
+                  <div>
+                    <p>5 C</p>
+                    <p>12 C</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="width: 7rem; margin: 0.5em; border-radius: 0.2em"
+            >
+              <div style="text-align: center">
+                <p style="font-weight: bold">Vendredi</p>
+                <div
+                  style="
+                    margin: 1em;
+                    background-color: green;
+                    border-radius: 0.2em;
+                    color: white;
+                    font-weight: bold;
+                  "
+                >
+                  <p>7</p>
+                </div>
+                <div>
+                  <i class="fa fa-cloud" aria-hidden="true"></i>
+                  <div>
+                    <p>5 C</p>
+                    <p>12 C</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card"
+              style="width: 7rem; margin: 0.5em; border-radius: 0.2em"
+            >
+              <div style="text-align: center">
+                <p style="font-weight: bold">Samedi</p>
+                <div
+                  style="
+                    margin: 1em;
+                    background-color: green;
+                    border-radius: 0.2em;
+                    color: white;
+                    font-weight: bold;
+                  "
+                >
+                  <p>10</p>
+                </div>
+                <div>
+                  <i class="fa fa-cloud" aria-hidden="true"></i>
+                  <div>
+                    <p>5 C</p>
+                    <p>12 C</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <app-map-quality-air></app-map-quality-air>
+      </div>
+    </div>
+  </div>
 </div>
