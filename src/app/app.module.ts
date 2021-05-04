@@ -17,7 +17,7 @@ import { HeadingEditModule } from './heading-edit/heading-edit.module';
 @NgModule({
   declarations: [
     AppComponent,
-  ],
+  ], 
   imports: [
     AppRoutingModule,
     BrowserModule,

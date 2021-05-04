@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataAccessService } from 'src/app/services/dao-api/data-access.service';
 
 @Component({
   selector: 'app-card-weather',
@@ -11,5 +12,7 @@ export class CardWeatherComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 
 }
