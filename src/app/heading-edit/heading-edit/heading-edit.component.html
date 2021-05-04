@@ -1,0 +1,23 @@
+<section class="container standardHeight">
+    <h2 class="text-center mt-5">Création d'une rubrique</h2>
+    <div>
+        <form class="spacingContainer">
+            <section class="form-group">
+                <label for="formGroupExampleInput">Nom de la rubrique</label>
+
+                <input [(ngModel)]="heading.title" name="title" type="text" 
+                [ngClass]="{'is-invalid' : !titleValidator}"
+                class="form-control" placeholder="Métélogie...." required>
+                
+                <!--Message si le champ est vide -->
+                <small class="invalid-feedback" *ngIf="!titleValidator">
+                    Le nom de rubrique ne peut pas être vide
+                </small>
+
+            </section>
+            <div class="text-right mt-5">
+                <button class="btn btn-primary" type=submit (click)="editHeading()">Valider</button>
+            </div>
+        </form>
+    </div>
+</section>

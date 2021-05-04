@@ -1,0 +1,23 @@
+<section class="container standardHeight">
+    <h2 class="text-center mt-5">Création d'une rubrique</h2>
+    <div>
+        <form class="spacingContainer" (ngSubmit)="saveHeading(form)" #form="ngForm">
+            <section class="form-group">
+                <label for="formGroupExampleInput">Nom de la rubrique</label>
+
+                <input #heading="ngModel" ngModel name="title" type="text" 
+                [ngClass]="{'is-invalid' : form.submitted && heading.errors?.required}" 
+                class="form-control" placeholder="Métélogie...." required>
+                
+                <!--Message si le champ est vide -->
+                <small class="invalid-feedback" *ngIf="form.submitted && heading.errors?.required">
+                    Le nom de rubrique ne peut pas être vide
+                </small>
+
+            </section>
+            <div class="text-right mt-5">
+                <button class="btn btn-primary" type=submit>Valider </button>
+            </div>
+        </form>
+    </div>
+</section>
