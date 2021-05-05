@@ -20,20 +20,20 @@
             </svg>
         </div>
         <div class="data-bottom">
-            <p><i class="fa fa-sun-o"> 12 C</i></p>
+            <p><i class="fa fa-sun-o"> {{ townDatas[0]?.weatherDatas[2]?.value }} C</i></p>
         </div>
     </div>
     <div class="card">
         <div class="card-top">
             <div class="indice">
-                <h1>1</h1>
+                <h1>{{ townDatas[0]?.airQualityDatas[0]?.value }}</h1>
             </div>
             <div class="IQA">
                 <p class="text-card">IQA US</p>
             </div>
         </div>
         <div class="data-bottom">
-            <p><i class="fa fa-tint" aria-hidden="true"></i> 32 %</p>
+            <p><i class="fa fa-tint" aria-hidden="true"></i> {{ townDatas[0]?.weatherDatas[6]?.value }} %</p>
         </div>
     </div>
     <div class="card">
@@ -42,11 +42,11 @@
                 <p class="text-card">Bon</p>
             </div>
             <div class="highest-polluant">
-                <p>NO2 | 8.1 yg/m2</p>
+                <p>{{townDatas[0]?.airQualityDatas[highestPolluant]?.name.toUpperCase() }} | {{townDatas[0]?.airQualityDatas[highestPolluant]?.value }} μg/m3</p>
             </div>
         </div>
         <div class="data-bottom">
-            <p><i class="fa fa-flag-o" aria-hidden="true"></i> 27.8 km/h</p>
+            <p><i class="fa fa-flag-o" aria-hidden="true"></i> {{ townDatas[0]?.weatherDatas[9]?.value }} km/h</p>
         </div>
     </div>
 </div>

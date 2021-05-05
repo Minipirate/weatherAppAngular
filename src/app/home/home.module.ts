@@ -6,7 +6,6 @@ import { WeatherModule } from './weather/weather.module';
 import { QualityAirModule } from './quality-air/quality-air.module';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent
