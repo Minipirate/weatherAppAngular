@@ -15,8 +15,6 @@ export class PostService {
    }
 
   getAllPostByHeading(id : number) {
-    console.log(id);
-    
     return this.http.get<Post[]>(this.baseUrl + "?heading.id=" + id, {observe : "response"});
   }
 

@@ -5,12 +5,12 @@
     <section class="collapse navbar-collapse justify-content-end col-md-10" id="navbarText">
         <ul class="navbar-nav ">
             <li class="liSpacing active linkVisual spaceBeetweenLink">
-                <a class="navSpacing navEffects" href="#" (click)="Activate('meteo')"
+                <a class="navSpacing navEffects" routerLink="weathertoday" (click)="Activate('meteo')"
                     [ngClass]="{'activeLink' : isActive.indexOf('meteo') != -1}">Prévision Météo <span
                         class="sr-only">(current)</span></a>
             </li>
             <li class="liSpacing linkVisual spaceBeetweenLink">
-                <a class="navSpacing navEffects" href="#" (click)="Activate('quality')"
+                <a class="navSpacing navEffects" routerLink="qualityairathome" (click)="Activate('quality')"
                     [ngClass]="{'activeLink' : isActive.indexOf('quality') != -1}">Qualité de l'air</a>
             </li>
             <li class="liSpacing linkVisual spaceBeetweenLink">

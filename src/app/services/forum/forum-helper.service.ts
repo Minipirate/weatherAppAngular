@@ -16,9 +16,9 @@ export class ForumHelperService {
       this.headingService.getById(res.id).subscribe(params => {
         heading.id = params.id;
         heading.title = params.title;
+        return heading
       })
     });
-    return heading
   }
 
   activateRouteId(id : number ,activateRoute: ActivatedRoute){

@@ -16,7 +16,7 @@ import { QualityAirAtHomePollutantslistComponent } from './quality-air-at-home-p
   ],
   imports: [
     RouterModule,
-    CommonModule    
+    CommonModule
   ],
   exports : [
     QualityAirAtHomeComponent,

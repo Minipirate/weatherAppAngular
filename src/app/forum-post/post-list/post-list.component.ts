@@ -17,22 +17,27 @@ import { PostService } from 'src/app/services/forum/post.service';
 export class PostListComponent implements OnInit {
 
   posts: Post[] = [];
+  heading : any = {} as Heading;
   id : any = 0
  
   constructor(private postService: PostService, protected modalService: NgbModal,
-    private activateRoute: ActivatedRoute) {
+    private activateRoute: ActivatedRoute, private headingService : HeadingService) {
       
   }
 
-  ngOnInit(): void {
-    this.populatePost();
+  ngOnInit() {
+    //this.heading = await this.forumHelperService.getHeadingById(this.heading, this.activateRoute)
+    this.activateRoute.params.subscribe(res => {
+      this.headingService.getById(res.id).subscribe(params => {
+        this.populatePost(params.id);
+      })
+    });
   }
 
 
-  populatePost() {
-  
-    this.id = this.activateRoute.snapshot.paramMap.get("id");
-    this.postService.getAllPostByHeading(this.id).subscribe((res: any) => {
+  populatePost(id : number) {
+   // this.id = this.activateRoute.snapshot.paramMap.get("id");
+    this.postService.getAllPostByHeading(id).subscribe((res: any) => {
       this.posts = res.body;
     })
   }
@@ -41,7 +46,7 @@ export class PostListComponent implements OnInit {
     let modalRef = this.modalService.open(PostDeleteComponent);
     modalRef.componentInstance.post = post;
     modalRef.result.then((confirm) => {
-      this.populatePost();
+      this.populatePost(post.id);
     }, (close) => {
 
     });
