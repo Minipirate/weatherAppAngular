@@ -16,7 +16,7 @@ export class DataAccessService {
     return this.http.get<Town[]>(this.url + 'towns')
   }
 
-  getTownsByName() {
+  getTownsByName(city: string) {
     // TODO
   }
 
@@ -41,6 +41,6 @@ export class DataAccessService {
    * @returns A list of TownDatas for a given number of hours and a given city 
    */
   getDataByCityNameForPastHours(city: string, nbHours: number) {
-    return this.http.get<TownData[]>('http://3.13.227.164:8093/town/datas?city=Montpellier&hours=1')//this.url + 'town/datas?city=' + city + '&hours=' + nbHours)
+    return this.http.get<TownData[]>(this.url + 'town/datas?city=' + city + '&hours=' + nbHours)
   }
 }
