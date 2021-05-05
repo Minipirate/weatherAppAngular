@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Heading } from 'src/app/model/forum/heading';
@@ -20,13 +19,14 @@ export class HeadingEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHeadingById()
+    console.log(this.heading);
+    
   }
 
   getHeadingById() {
     this.activateRoute.params.subscribe(res => {
       this.headingService.getById(res.id).subscribe(params =>{
         this.heading = params;
-        console.log(this.heading);
       })
     });
   }
