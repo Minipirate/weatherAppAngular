@@ -48,15 +48,13 @@ const routes: Routes = [
   { path: 'forum/message/edit/:id', component: MessageEditComponent },
   // ----- LOGIN / REGISTRATION -----
   { path: 'registration', component: RegistrationComponent },
-
   // ----- QUALITYAIRATHOME ----
   { path: 'qualityairathome', component: QualityAirAtHomeComponent },
   { path : 'weathertoday', component: WeatherTodayComponent },
-      // ----- FORUM -----
+      // ----- CONNEXION -----
   { path: 'connection', component: ConnectionComponent },
       // -----REDIRECTION-----
-  {path: '**', component: HomeComponent}
-
+  {path: '**', component: HomeComponent},
   // ----- WEATHERTODAY ---- 
   { path: 'weathertoday', component: WeatherTodayComponent },
 
