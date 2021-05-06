@@ -12,6 +12,9 @@ import { ForumModule } from './forum/forum.module';
 import { HeadingCreateModule } from './heading-create/heading-create.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeadingEditModule } from './heading-edit/heading-edit.module';
+import { WeatherTomorrowModule } from './weather-tomorrow/weather-tomorrow.module';
+import { WeatherWeekendModule } from './weather-weekend/weather-weekend.module';
+import { WeatherhoursModule } from './weatherhours/weatherhours.module';
 import { ForumPostModule } from './forum-post/forum-post.module';
 import { PostCreateModule } from './post-create/post-create.module';
 import { PostEditModule } from './post-edit/post-edit.module';
@@ -44,6 +47,10 @@ import { ConnectionModule } from './connection/connection.module';
     ForumMessageModule,
     HeadingCreateModule,
     HeadingEditModule,
+    BrowserAnimationsModule,
+    WeatherTomorrowModule,
+    WeatherWeekendModule,
+    WeatherhoursModule,
     PostCreateModule,
     PostEditModule,
     MessageCreateModule,
