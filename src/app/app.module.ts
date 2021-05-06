@@ -12,6 +12,9 @@ import { ForumModule } from './forum/forum.module';
 import { HeadingCreateModule } from './heading-create/heading-create.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeadingEditModule } from './heading-edit/heading-edit.module';
+import { ForumPostModule } from './forum-post/forum-post.module';
+import { PostCreateModule } from './post-create/post-create.module';
+import { PostEditModule } from './post-edit/post-edit.module';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { HeadingEditModule } from './heading-edit/heading-edit.module';
     ForumModule,
     HeadingCreateModule,
     HeadingEditModule,
+    ForumPostModule,
+    PostCreateModule,
+    PostEditModule,
     BrowserAnimationsModule
   ],
   providers: [],

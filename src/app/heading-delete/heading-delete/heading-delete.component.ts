@@ -13,7 +13,7 @@ import { HeadingService } from 'src/app/services/forum/heading.service';
 export class HeadingDeleteComponent implements OnInit {
   @Input() heading : any = {} as Heading
 
-  constructor(private headingService : HeadingService,private modale: NgbActiveModal, private toastr: ToastrService,private activateRoute : ActivatedRoute) { }
+  constructor(private headingService : HeadingService,private modale: NgbActiveModal, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }

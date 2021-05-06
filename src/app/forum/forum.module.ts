@@ -13,7 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     RouterModule,
     CommonModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   exports: [
     ForumComponent,

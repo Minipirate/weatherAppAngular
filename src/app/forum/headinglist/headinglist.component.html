@@ -1,7 +1,7 @@
 <div class="border rounded p-3 mb-3 mt-3" *ngFor="let heading of headings">
     <section class="row">
         <section class="align-self-center col-md-9">
-            <a class="visualLink">
+            <a class="visualLink" routerLink="post/{{heading.id}}">
                 <h3 class="headingTitle ">{{heading.title}}</h3>
             </a>
         </section>
