@@ -18,6 +18,7 @@ import { PostEditModule } from './post-edit/post-edit.module';
 import { ForumMessageModule } from './forum-message/forum-message.module';
 import { MessageCreateModule } from './message-create/message-create.module';
 import { MessageEditModule } from './message-edit/message-edit.module';
+import { RegistrationModule } from './registration/registration.module';
 
 
 @NgModule({
@@ -46,6 +47,8 @@ import { MessageEditModule } from './message-edit/message-edit.module';
     PostEditModule,
     MessageCreateModule,
     MessageEditModule,
+    // ----- Login / Registration -----
+    RegistrationModule
    
   ],
   providers: [],

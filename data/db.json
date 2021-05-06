@@ -53,8 +53,8 @@
       "id": 3
     },
     {
-      "content": "Je ne pense pas que cela soit pertinent",
-      "date": "2021-05-06T12:28:14.181Z",
+      "content": "Je ne pense pas que cela soit pertinentgfh",
+      "date": "2021-05-06T13:48:19.138Z",
       "post": {
         "title": "gdfsgfsgdfsg",
         "heading": {
@@ -77,6 +77,24 @@
         "id": 5
       },
       "id": 5
+    }
+  ],
+  "user": [
+    {
+      "lastname": "GOUPILLOT",
+      "firstname": "Alexis",
+      "email": "g.al@gmail.com",
+      "address": "",
+      "password": "test",
+      "id": 1
+    },
+    {
+      "lastname": "Cermelli",
+      "firstname": "Tom",
+      "email": "tom.cermelli91@gmail.com",
+      "address": "26 Rue de Clementville",
+      "password": "1234",
+      "id": 2
     }
   ]
 }

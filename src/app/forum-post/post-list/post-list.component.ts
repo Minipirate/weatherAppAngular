@@ -34,7 +34,6 @@ export class PostListComponent implements OnInit {
         this.populatePost(params.id);
       })
     });
-
   }
    
 

@@ -1,0 +1,11 @@
+.standardHeight{
+    min-height: 700px;
+}
+
+.spacingContainer{
+    margin: 5% 10% 5% 10%;
+}
+
+.title{
+    font-size: 3em;
+}

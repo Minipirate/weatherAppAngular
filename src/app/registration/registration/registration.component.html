@@ -1,0 +1,59 @@
+<div class="row standardHeight">
+    <section class="col"></section>
+    <section class="col-10">
+        <section class="row justify-content-center">
+            <h2 class="title text-center mt-5">
+                <i class="fa fa-user"></i> Create a New User
+            </h2>
+        </section>
+        <section class="row mt-3">
+            <section class="col-12">
+                <form class="spacingContainer" (ngSubmit)="saveUser(form)" #form="ngForm">
+                    <section class="form-row justify-content-center">
+                        <section class="form-group col-md-3">
+                            <label for="lastname">*Nom</label>
+                            <input #lastname="ngModel" ngModel name="lastname" class="form-control" type="text"
+                                [ngClass]="{'is-invalid' : form.submitted && lastname.errors?.required}"
+                                placeholder="GOUPILLOT..." required>
+                            <small class="invalid-feedback" *ngIf="form.submitted && lastname.errors?.required">Le nom est obligatoire</small>
+                        </section>
+                        <section class="form-group col-md-3">
+                            <label for="firstname">*Prenom</label>
+                            <input #firstname="ngModel" ngModel name="firstname" class="form-control" placeholder="Alexis..."
+                            [ngClass]="{'is-invalid' : form.submitted && email.errors?.required}" required>
+                            <small class="invalid-feedback" *ngIf="form.submitted && email.errors?.required">Le prénom est obligatoire</small>
+                        </section>
+                    </section>
+                    <section class="form-row justify-content-center mt-3">
+                        <section class="form-group col-md-3">
+                            <label for="email">*Email</label>
+                            <input #email="ngModel" ngModel name="email" class="form-control"
+                                [ngClass]="{'is-invalid' : form.submitted && email.errors?.required}"
+                                placeholder="G.alexis@gmail.com..." required>
+                            <small class="invalid-feedback" *ngIf="form.submitted && email.errors?.required">L'email est obligatoire</small>
+                        </section>
+                        <section class="form-group col-md-3">
+                            <label for="address">Adresse complète</label>
+                            <input #address="ngModel" ngModel name="address" class="form-control" type="email"
+                                placeholder="14 rue du Bayle , 34000 Montpellier...">
+                        </section>
+                    </section>
+                    <section class="form-row justify-content-center mt-3">
+                        <section class="form-group col-md-6">
+                            <label for="password">*Mot de passe</label>
+                            <input #password="ngModel" ngModel name="password" class="form-control" placeholder="Luke1234..."
+                            [ngClass]="{'is-invalid' : form.submitted && password.errors?.required}" required>
+                            <small class="invalid-feedback" *ngIf="form.submitted && email.errors?.required">Le mot de passe est obligatoire</small>
+                        </section>
+                    </section>
+                    <section class=" form-group form-row justify-content-end mt-2 col-md-9">
+                        <section>
+                            <button type="submit" class="btn btn-primary">Soumettre</button>
+                        </section>
+                    </section>
+                </form>
+            </section>
+        </section>
+    </section>
+    <section class="col"></section>
+</div>
