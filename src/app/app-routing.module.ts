@@ -13,6 +13,7 @@ import { ForumMessageComponent } from './forum-message/forum-message/forum-messa
 import { MessageCreateComponent } from './message-create/message-create/message-create.component';
 import { MessageEditComponent } from './message-edit/message-edit/message-edit.component';
 import { RegistrationComponent } from './registration/registration/registration.component';
+import { ConnectionComponent } from './connection/connection/connection.component';
 
 const routes: Routes = [
       // ----- HOME -----
@@ -28,10 +29,12 @@ const routes: Routes = [
   {path: 'forum/message/:id/add', component: MessageCreateComponent},
   {path: 'forum/message/edit/:id', component: MessageEditComponent},
       // ----- LOGIN / REGISTRATION -----
-      {path: 'registration', component: RegistrationComponent},
+  {path: 'registration', component: RegistrationComponent},
       // ----- QUALITYAIRATHOME - WEATHERTODAY ----
   { path: 'qualityairathome', component: QualityAirAtHomeComponent },
   { path : 'weathertoday', component: WeatherTodayComponent },
+      // ----- FORUM -----
+  { path: 'connection', component: ConnectionComponent },
       // -----REDIRECTION-----
   {path: '**', component: HomeComponent}
 ];

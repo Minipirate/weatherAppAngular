@@ -19,6 +19,7 @@ import { ForumMessageModule } from './forum-message/forum-message.module';
 import { MessageCreateModule } from './message-create/message-create.module';
 import { MessageEditModule } from './message-edit/message-edit.module';
 import { RegistrationModule } from './registration/registration.module';
+import { ConnectionModule } from './connection/connection.module';
 
 
 @NgModule({
@@ -48,8 +49,9 @@ import { RegistrationModule } from './registration/registration.module';
     MessageCreateModule,
     MessageEditModule,
     // ----- Login / Registration -----
-    RegistrationModule
-   
+    RegistrationModule,
+    // ----- FORUM -----
+    ConnectionModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
