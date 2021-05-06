@@ -12,6 +12,9 @@ import { ForumModule } from './forum/forum.module';
 import { HeadingCreateModule } from './heading-create/heading-create.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeadingEditModule } from './heading-edit/heading-edit.module';
+import { WeatherTomorrowModule } from './weather-tomorrow/weather-tomorrow.module';
+import { WeatherWeekendModule } from './weather-weekend/weather-weekend.module';
+import { WeatherhoursModule } from './weatherhours/weatherhours.module';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { HeadingEditModule } from './heading-edit/heading-edit.module';
     ForumModule,
     HeadingCreateModule,
     HeadingEditModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    WeatherTomorrowModule,
+    WeatherWeekendModule,
+    WeatherhoursModule
   ],
   providers: [],
   bootstrap: [AppComponent]
