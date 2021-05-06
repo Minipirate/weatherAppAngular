@@ -9,7 +9,6 @@ import { TownData } from 'src/app/model/TownData';
 export class CardWeatherComponent implements OnInit {
 
   @Input() townDatas: any = {} as TownData
-  @Input() currentCity: any = {} as TownData 
   highestPolluant: any
 
   constructor() { }

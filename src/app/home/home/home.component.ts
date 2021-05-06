@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   async getTownData() {
     this.townDatas = await this.dataAccess.getDataByCityNameForPastHours(this.currentCity, 1).toPromise()
-    console.log(typeof(this.townDatas));
+    console.log(this.townDatas)
     
   }
 
