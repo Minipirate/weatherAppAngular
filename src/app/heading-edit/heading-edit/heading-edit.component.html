@@ -5,10 +5,9 @@
             <section class="form-group">
                 <label for="formGroupExampleInput">Nom de la rubrique</label>
 
-                <input [(ngModel)]="heading.title" name="title" type="text" 
-                [ngClass]="{'is-invalid' : !titleValidator}"
-                class="form-control" placeholder="Métélogie...." required>
-                
+                <input [(ngModel)]="heading.title" name="title" type="text" [ngClass]="{'is-invalid' : !titleValidator}"
+                    class="form-control" placeholder="Métélogie...." required>
+
                 <!--Message si le champ est vide -->
                 <small class="invalid-feedback" *ngIf="!titleValidator">
                     Le nom de rubrique ne peut pas être vide

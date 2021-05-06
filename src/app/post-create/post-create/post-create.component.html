@@ -1,0 +1,20 @@
+<section class="container standardHeight">
+    <h2 class="text-center mt-5">Création de post</h2>
+    <div>
+        <form class="spacingContainer" (ngSubmit)="savePost(form)" #form="ngForm">
+            <section class="form-group">
+                <label for="formGroupExampleInput">Nom du post</label>
+                <input #post="ngModel" ngModel name="title" type="text"
+                [ngClass]="{'is-invalid' : form.submitted && post.errors?.required}"
+                type="text" class="form-control" placeholder="La météo de Montpellier...." required>
+                <!--Message si le champ est vide -->
+                <small class="invalid-feedback">
+                    Le nom du post ne peut pas être vide
+                </small>
+            </section>
+            <div class="text-right mt-5">
+                <button class="btn btn-primary" type=submit>Valider</button>
+            </div>
+        </form>
+    </div>
+</section>

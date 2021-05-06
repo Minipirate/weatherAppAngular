@@ -1,0 +1,19 @@
+<section class="container standardHeight">
+    <h2 class="text-center mt-5">Editer votre message</h2>
+    <div>
+        <form class="spacingContainer">
+            <section class="form-group">
+                <label for="formGroupExampleInput">Message</label>
+                <input  [(ngModel)]="message.content" name="content" type="text" [ngClass]="{'is-invalid' : !contentValidator}" 
+                class="form-control" placeholder="Je ne pense pas que..." required>
+                <!-- Message si le champ est vide -->
+                <small class="invalid-feedback">
+                    Le message ne peut pas être vide
+                </small>
+            </section>
+            <div class="text-right mt-5">
+                <button class="btn btn-primary" type=submit (click)="editMessage()">Valider</button>
+            </div>
+        </form>
+    </div>
+</section>

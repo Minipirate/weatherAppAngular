@@ -1,0 +1,19 @@
+<section class="container standardHeight">
+    <h2 class="text-center mt-5">Editer un post</h2>
+    <div>
+        <form class="spacingContainer">
+            <section class="form-group">
+                <label for="formGroupExampleInput">Nom du post</label>
+                <input  [(ngModel)]="post.title" name="title" type="text" [ngClass]="{'is-invalid' : !titleValidator}" 
+                class="form-control" placeholder="La météo de Montpellier...." required>
+                <!-- Message si le champ est vide -->
+                <small class="invalid-feedback">
+                    Le nom du post ne peut pas être vide
+                </small>
+            </section>
+            <div class="text-right mt-5">
+                <button class="btn btn-primary" type=submit (click)="editPost()">Valider</button>
+            </div>
+        </form>
+    </div>
+</section>

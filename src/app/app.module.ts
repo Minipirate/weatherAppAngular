@@ -15,6 +15,13 @@ import { HeadingEditModule } from './heading-edit/heading-edit.module';
 import { WeatherTomorrowModule } from './weather-tomorrow/weather-tomorrow.module';
 import { WeatherWeekendModule } from './weather-weekend/weather-weekend.module';
 import { WeatherhoursModule } from './weatherhours/weatherhours.module';
+import { ForumPostModule } from './forum-post/forum-post.module';
+import { PostCreateModule } from './post-create/post-create.module';
+import { PostEditModule } from './post-edit/post-edit.module';
+import { ForumMessageModule } from './forum-message/forum-message.module';
+import { MessageCreateModule } from './message-create/message-create.module';
+import { MessageEditModule } from './message-edit/message-edit.module';
+import { RegistrationModule } from './registration/registration.module';
 
 
 @NgModule({
@@ -25,19 +32,31 @@ import { WeatherhoursModule } from './weatherhours/weatherhours.module';
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
-    LayoutModule,
     BrowserAnimationsModule,
+    // ----- HEADER / FOOTER -----
+    LayoutModule,
+    // ----- HOME -----
     HomeModule,
+    // ----- QUALITYAIRATHOME - WEATHERTODAY ----
     QualityAirAtHomeModule,
     WeatherTodayModule,
-    HomeModule,
+     // ----- FORUM -----
     ForumModule,
+    ForumPostModule,
+    ForumMessageModule,
     HeadingCreateModule,
     HeadingEditModule,
     BrowserAnimationsModule,
     WeatherTomorrowModule,
     WeatherWeekendModule,
-    WeatherhoursModule
+    WeatherhoursModule,
+    PostCreateModule,
+    PostEditModule,
+    MessageCreateModule,
+    MessageEditModule,
+    // ----- Login / Registration -----
+    RegistrationModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
