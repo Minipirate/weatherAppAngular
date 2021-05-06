@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConnectionComponent } from './connection/connection.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -9,7 +10,8 @@ import { ConnectionComponent } from './connection/connection.component';
     ConnectionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ], 
   exports: [
     ConnectionComponent

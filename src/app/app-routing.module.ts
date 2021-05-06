@@ -33,37 +33,19 @@ const routes: Routes = [
   {path: 'forum/message/edit/:id', component: MessageEditComponent},
       // ----- LOGIN / REGISTRATION -----
   {path: 'registration', component: RegistrationComponent},
-      // ----- QUALITYAIRATHOME - WEATHERTODAY ----
-  // ----- HOME -----
-  { path: 'home', component: HomeComponent },
-  // ----- FORUM -----
-  { path: 'forum', component: ForumComponent },
-  { path: 'forum/heading/add', component: HeadingCreateComponent },
-  { path: 'forum/heading/edit/:id', component: HeadingEditComponent },
-  { path: 'forum/post/:id', component: ForumPostComponent },
-  { path: 'forum/post/:id/add', component: PostCreateComponent },
-  { path: 'forum/post/edit/:id', component: PostEditComponent },
-  { path: 'forum/message/:id', component: ForumMessageComponent },
-  { path: 'forum/message/:id/add', component: MessageCreateComponent },
-  { path: 'forum/message/edit/:id', component: MessageEditComponent },
-  // ----- LOGIN / REGISTRATION -----
-  { path: 'registration', component: RegistrationComponent },
+    // ----- CONNEXION -----
+  { path: 'connection', component: ConnectionComponent },
   // ----- QUALITYAIRATHOME ----
   { path: 'qualityairathome', component: QualityAirAtHomeComponent },
   { path : 'weathertoday', component: WeatherTodayComponent },
-      // ----- CONNEXION -----
-  { path: 'connection', component: ConnectionComponent },
-      // -----REDIRECTION-----
+  // -----REDIRECTION-----
   {path: '**', component: HomeComponent},
   // ----- WEATHERTODAY ---- 
   { path: 'weathertoday', component: WeatherTodayComponent },
-
   // ----- WEATHERTOMORROW ----
   { path: 'weathertomorrow', component: WeatherTomorrowComponent },
-
   // ----- WEATHERWEEKEND ----
   { path: 'weatherweekend', component: WeatherWeekendComponent },
-
   // ----- WEATHERHOURS ----
   { path: 'weatherhours', component: WeatherhoursComponent },
   // -----REDIRECTION-----
