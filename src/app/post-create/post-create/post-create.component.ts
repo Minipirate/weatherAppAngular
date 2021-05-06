@@ -3,8 +3,6 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Heading } from 'src/app/model/forum/heading';
-import { Post } from 'src/app/model/forum/post';
-import { ForumHelperService } from 'src/app/services/forum/forum-helper.service';
 import { HeadingService } from 'src/app/services/forum/heading.service';
 import { PostService } from 'src/app/services/forum/post.service';
 
@@ -16,22 +14,18 @@ import { PostService } from 'src/app/services/forum/post.service';
 export class PostCreateComponent implements OnInit {
 
   heading: any = {} as Heading;
-
-  post: any = {} as Post;
   titleValidator: boolean = true;
 
   constructor(private postService: PostService, private toastr: ToastrService, private router: Router,
-    private forumHelper: ForumHelperService, private activateRoute: ActivatedRoute, private headingService: HeadingService) { }
+    private activateRoute: ActivatedRoute, private headingService: HeadingService) { }
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(res => {
       this.headingService.getById(res.id).subscribe(params => {
         console.log(params);
-        
         this.heading = params
       })
     });
-
   }
 
   savePost(form: NgForm) {
@@ -44,7 +38,7 @@ export class PostCreateComponent implements OnInit {
       setTimeout(() => { this.router.navigate(['forum']); }, 3000)
     }
     else {
-      this.toastr.error("Vous n'avez pas c  orrectement remplit le champs, réessayer s'il vous plait", "Erreur")
+      this.toastr.error("Vous n'avez pas correctement remplit le champs, réessayer s'il vous plait", "Erreur")
     }
   }
 }

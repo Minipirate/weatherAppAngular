@@ -15,7 +15,8 @@ export class PostDeleteComponent implements OnInit {
   @Input() post : any = {} as Post
 
 
-  constructor(private postService : PostService, private modale: NgbActiveModal, private toastr: ToastrService,private activateRoute : ActivatedRoute) { }
+  constructor(private postService : PostService, private modale: NgbActiveModal, 
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -27,7 +28,7 @@ export class PostDeleteComponent implements OnInit {
   deletePost(post : Post) {
     this.postService.delete(post).subscribe(res =>{
     })
-    this.toastr.success("La supréssion de votre rubrique s'est bien déroulé", "Suppréssion validé");
+    this.toastr.success("La supréssion de votre post s'est bien déroulé", "Suppréssion validé");
     this.modale.close()
   }
 

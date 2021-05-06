@@ -19,8 +19,6 @@ export class PostEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPostById()
-    console.log(this.post);
-    
   }
 
   getPostById(){

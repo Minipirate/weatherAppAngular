@@ -1,1 +1,28 @@
-<p>message-list works!</p>
+<div class="border rounded mb-3 mt-3" *ngFor="let message of messages">
+    <section class="row">
+
+        <section class="d-flex flex-column col-md-2 text-center border-right">
+            <i class="fa fa-user fa-4x"></i>
+            <section>
+                <p>nom</p>
+            </section>
+        </section>
+
+        <section class="d-flex col-md-10">
+            <section class="align-self-center col-md-10">
+                <p>{{message?.content}}</p>
+            </section>
+            <section class="d-flex flex-column align-items-end col-md-2">
+                <section>
+                    <p>{{message.date | date: 'shortDate' }} {{message.date | date: 'HH:mm:ss' }}</p>
+                </section>
+                <section>
+                    <a class="visualLink" routerLink="/forum/message/edit/{{message.id}}"><button
+                            class="btn btn-success mr-2"><i class="fa fa-pencil fa-2x"></i></button></a>
+                    <a class="" (click)="deleteMessage(message)"><button class="btn btn-danger">
+                            <i class="fa fa-trash fa-2x"></i></button></a>
+                </section>
+            </section>
+        </section>
+    </section>
+</div>

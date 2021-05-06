@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Heading } from 'src/app/model/forum/heading';
 import { Post } from 'src/app/model/forum/post';
 
 @Injectable({
@@ -22,16 +21,16 @@ export class PostService {
     return this.http.get<Post>(this.baseUrl + id);
   }
 
-  create(heading: Post){
-    return this.http.post(this.baseUrl, heading);
+  create(post: Post){
+    return this.http.post(this.baseUrl, post);
   }
 
-  update(heading: Post){
-    return this.http.put(this.baseUrl + heading.id, heading);
+  update(post: Post){
+    return this.http.put(this.baseUrl + post.id, post);
   }
 
-  delete(heading : Post){
-    return this.http.delete(this.baseUrl + heading.id);
+  delete(post : Post){
+    return this.http.delete(this.baseUrl + post.id);
   }
 
 }

@@ -9,6 +9,9 @@ import { HeadingEditComponent } from './heading-edit/heading-edit/heading-edit.c
 import { ForumPostComponent } from './forum-post/forum-post/forum-post.component';
 import { PostCreateComponent } from './post-create/post-create/post-create.component';
 import { PostEditComponent } from './post-edit/post-edit/post-edit.component';
+import { ForumMessageComponent } from './forum-message/forum-message/forum-message.component';
+import { MessageCreateComponent } from './message-create/message-create/message-create.component';
+import { MessageEditComponent } from './message-edit/message-edit/message-edit.component';
 
 const routes: Routes = [
       // ----- HOME -----
@@ -20,6 +23,9 @@ const routes: Routes = [
   {path: 'forum/post/:id', component: ForumPostComponent},
   {path: 'forum/post/:id/add', component: PostCreateComponent},
   {path: 'forum/post/edit/:id', component: PostEditComponent},
+  {path: 'forum/message/:id', component: ForumMessageComponent},
+  {path: 'forum/message/:id/add', component: MessageCreateComponent},
+  {path: 'forum/message/edit/:id', component: MessageEditComponent},
   // ----- QUALITYAIRATHOME - WEATHERTODAY ----
   { path: 'qualityairathome', component: QualityAirAtHomeComponent },
   { path : 'weathertoday', component: WeatherTodayComponent },
