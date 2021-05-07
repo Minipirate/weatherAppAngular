@@ -23,6 +23,7 @@ import { MessageCreateModule } from './message-create/message-create.module';
 import { MessageEditModule } from './message-edit/message-edit.module';
 import { RegistrationModule } from './registration/registration.module';
 import { WeatherregionModule } from './weatherregion/weatherregion.module';
+import { ConnectionModule } from './connection/connection.module';
 
 
 @NgModule({
@@ -65,8 +66,10 @@ import { WeatherregionModule } from './weatherregion/weatherregion.module';
     MessageEditModule,
 
     // ----- Login / Registration -----
-    RegistrationModule
+    RegistrationModule,
 
+    // ----- FORUM -----
+    ConnectionModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

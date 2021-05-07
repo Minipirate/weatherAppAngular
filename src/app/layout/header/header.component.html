@@ -18,7 +18,7 @@
                     [ngClass]="{'activeLink' : isActive.indexOf('forum') != -1}">Forum</a>
             </li>
             <li class="liSpacing linkVisual spaceBeetweenLink">
-                <a class="navSpacing navEffects" href="#" (click)="Activate('connexion')"
+                <a class="navSpacing navEffects" routerLink="connection" (click)="Activate('connexion')"
                     [ngClass]="{'activeLink' : isActive.indexOf('connexion') != -1}">Connexion</a>
             </li>
         </ul>
