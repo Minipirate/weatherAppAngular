@@ -16,6 +16,7 @@ import { RegistrationComponent } from './registration/registration/registration.
 import { WeatherTomorrowComponent } from './weather-tomorrow/weather-tomorrow/weather-tomorrow.component';
 import { WeatherWeekendComponent } from './weather-weekend/weather-weekend/weather-weekend.component';
 import { WeatherhoursComponent } from './weatherhours/weatherhours/weatherhours.component';
+import { WeatherregionComponent } from './weatherregion/weatherregion/weatherregion.component';
 
 const routes: Routes = [
   // ----- HOME -----
@@ -47,6 +48,10 @@ const routes: Routes = [
 
   // ----- WEATHERHOURS ----
   { path: 'weatherhours', component: WeatherhoursComponent },
+
+  // ----- WEATHERREGION ----
+  { path: 'weatherregion', component: WeatherregionComponent },
+
   // -----REDIRECTION-----
   { path: '**', component: HomeComponent }
 ];
