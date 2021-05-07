@@ -13,16 +13,16 @@ export class HeadingEditComponent implements OnInit {
 
   heading : any = {} as Heading;
   titleValidator : boolean = true;
+  titleLengthValidator: boolean = true;
 
   constructor(private headingService : HeadingService ,private toastr: ToastrService, private router : Router, private activateRoute : ActivatedRoute) { 
   }
 
   ngOnInit(): void {
     this.getHeadingById()
-    console.log(this.heading);
-    
   }
 
+  // Permet de récupérer le Heading grâce à l'id passé dans l'url
   getHeadingById() {
     this.activateRoute.params.subscribe(res => {
       this.headingService.getById(res.id).subscribe(params =>{
@@ -33,7 +33,8 @@ export class HeadingEditComponent implements OnInit {
 
   editHeading() {
     this.titleValidator = !this.heading.title ? this.titleValidator = false : this.titleValidator = true;
-    if(this.titleValidator){
+    this.titleLengthValidator = this.heading.title && this.heading.title.length < 5 ? this.titleLengthValidator = false : this.titleLengthValidator = true;
+    if(this.titleValidator && this.titleLengthValidator){
       this.headingService.update(this.heading).subscribe( res => {
 
       });

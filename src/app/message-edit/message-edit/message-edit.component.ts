@@ -13,6 +13,7 @@ export class MessageEditComponent implements OnInit {
 
   message : any = {} as Message;
   contentValidator : boolean = true;
+  contentLengthValidator : boolean = true;
 
   constructor(private messageService : MessageService ,private toastr: ToastrService, private router : Router, 
     private activateRoute : ActivatedRoute) { }
@@ -31,7 +32,8 @@ export class MessageEditComponent implements OnInit {
 
   editMessage(){
     this.contentValidator = !this.message.content ? this.contentValidator = false : this.contentValidator = true;
-    if(this.contentValidator){
+    this.contentLengthValidator = this.message.content && this.message.content.length < 10 ? this.contentLengthValidator = false : this.contentLengthValidator = true;
+    if(this.contentValidator && this.contentLengthValidator){
       let currentdate = new Date();
       this.message.date = currentdate;
       this.messageService.update(this.message).subscribe( res => {

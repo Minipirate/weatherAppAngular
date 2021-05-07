@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-weather-tomorrow-matinmidisoirnuit',
-  templateUrl: './weather-tomorrow-matinmidisoirnuit.component.html',
-  styleUrls: ['./weather-tomorrow-matinmidisoirnuit.component.css']
+  selector: 'app-weatherregion-selectbar',
+  templateUrl: './weatherregion-selectbar.component.html',
+  styleUrls: ['./weatherregion-selectbar.component.css']
 })
-export class WeatherTomorrowMatinmidisoirnuitComponent implements OnInit {
+export class WeatherregionSelectbarComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -28,4 +28,5 @@ export class WeatherTomorrowMatinmidisoirnuitComponent implements OnInit {
   onClickRegion() {
     this.router.navigate(['/weatherregion'])
   }
+
 }

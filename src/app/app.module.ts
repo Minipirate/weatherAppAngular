@@ -22,13 +22,14 @@ import { ForumMessageModule } from './forum-message/forum-message.module';
 import { MessageCreateModule } from './message-create/message-create.module';
 import { MessageEditModule } from './message-edit/message-edit.module';
 import { RegistrationModule } from './registration/registration.module';
+import { WeatherregionModule } from './weatherregion/weatherregion.module';
 import { ConnectionModule } from './connection/connection.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-  ], 
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -38,25 +39,35 @@ import { ConnectionModule } from './connection/connection.module';
     LayoutModule,
     // ----- HOME -----
     HomeModule,
-    // ----- QUALITYAIRATHOME - WEATHERTODAY ----
+
+    // ----- QUALITYAIRATHOME ----
     QualityAirAtHomeModule,
+    // ---- WEATHERTODAY ----
     WeatherTodayModule,
-     // ----- FORUM -----
+    // ---- WEATHERTOMORROW ----
+    WeatherTomorrowModule,
+    // ---- WEATHERWEEKEND ----
+    WeatherWeekendModule,
+    // ---- WEATHERHOURS ----
+    WeatherhoursModule,
+    // ---- WEATHERREGION ----
+    WeatherregionModule,
+
+    // ----- FORUM -----
     ForumModule,
     ForumPostModule,
     ForumMessageModule,
     HeadingCreateModule,
     HeadingEditModule,
     BrowserAnimationsModule,
-    WeatherTomorrowModule,
-    WeatherWeekendModule,
-    WeatherhoursModule,
     PostCreateModule,
     PostEditModule,
     MessageCreateModule,
     MessageEditModule,
+
     // ----- Login / Registration -----
     RegistrationModule,
+
     // ----- FORUM -----
     ConnectionModule  
   ],
