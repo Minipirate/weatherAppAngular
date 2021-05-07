@@ -4,11 +4,16 @@
         <form class="spacingContainer">
             <section class="form-group">
                 <label for="formGroupExampleInput">Message</label>
-                <input  [(ngModel)]="message.content" name="content" type="text" [ngClass]="{'is-invalid' : !contentValidator}" 
-                class="form-control" placeholder="Je ne pense pas que..." required>
-                <!-- Message si le champ est vide -->
-                <small class="invalid-feedback">
+                <input [(ngModel)]="message.content" name="content" type="text"
+                    [ngClass]="{'is-invalid' : !contentValidator || !contentLengthValidator}" class="form-control"
+                    placeholder="Je ne pense pas que..." minlength="10" required>
+                <!--Message si le champ est vide -->
+                <small class="invalid-feedback" *ngIf="!contentValidator">
                     Le message ne peut pas être vide
+                </small>
+                <!--Message si le champs n'a pa au moin 10 caractères -->
+                <small class="form-text text-danger" *ngIf="!contentLengthValidator">
+                    Le message doit contenir au moin 10 caractères
                 </small>
             </section>
             <div class="text-right mt-5">

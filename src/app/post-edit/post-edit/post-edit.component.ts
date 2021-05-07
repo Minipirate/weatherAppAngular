@@ -13,6 +13,7 @@ export class PostEditComponent implements OnInit {
 
   post : any = {} as Post;
   titleValidator : boolean = true;
+  titleLengthValidator: boolean = true;
 
   constructor(private postService : PostService ,private toastr: ToastrService, private router : Router, 
     private activateRoute : ActivatedRoute) { }
@@ -31,7 +32,8 @@ export class PostEditComponent implements OnInit {
 
   editPost(){
     this.titleValidator = !this.post.title ? this.titleValidator = false : this.titleValidator = true;
-    if(this.titleValidator){
+    this.titleLengthValidator = this.post.title && this.post.title.length < 5 ? this.titleLengthValidator = false : this.titleLengthValidator = true;
+    if(this.titleValidator && this.titleLengthValidator){
       this.postService.update(this.post).subscribe( res => {
 
       });

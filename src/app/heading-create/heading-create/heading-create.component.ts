@@ -18,15 +18,13 @@ export class HeadingCreateComponent implements OnInit {
 
   saveHeading(form : NgForm){
     if(form.valid){
-      console.log(form.value);
       this.headingService.create(form.value).subscribe( res => {
-
       });
       this.toastr.success("Votre rubrique va être crée, vous allez ensuite être redirigé vers le forum", "Création valide");
       setTimeout(() => {this.router.navigate(['forum']); }, 3000)
     }
     else {
-      this.toastr.error("Vous n'avez pas c  orrectement remplit le champs, réessayer s'il vous plait", "Erreur")
+      this.toastr.error("Vous n'avez pas correctement remplit le champs, réessayer s'il vous plait", "Erreur")
     }
   }
 

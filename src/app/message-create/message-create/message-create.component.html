@@ -4,13 +4,21 @@
         <form class="spacingContainer" (ngSubmit)="saveMessage(form)" #form="ngForm">
             <section class="form-group">
                 <label for="formGroupExampleInput">Message</label>
-                <input #message="ngModel" ngModel name="content" type="text"
-                [ngClass]="{'is-invalid' : form.submitted && message.errors?.required}"
-                type="text" class="form-control" placeholder="Je ne pense pas que...." required>
-                <!--Message si le champ est vide -->
-                <small class="invalid-feedback" *ngIf="form.submitted && message.errors?.required">
-                    Le message ne peut pas être vide
-                </small>
+                <input #messageInput="ngModel" ngModel name="content" type="text"
+                [ngClass]="{'is-invalid' : form.submitted && (messageInput.errors?.required || messageInput.errors?.minlength)}"
+                type="text" class="form-control" placeholder="Je ne pense pas que...." minlength="10" required>
+
+                <div *ngIf="form.submitted && messageInput.invalid">
+                    <!--Message si le champ est vide -->
+                   <small class="form-text text-danger" *ngIf="messageInput.errors?.required">
+                       Le message ne peut pas être vide
+                   </small>
+                   <!--Message si le champs n'a pa au moin 5 caractères -->
+                   <small class="form-text text-danger" *ngIf="messageInput.errors?.minlength">
+                       Le message doit contenir au moin 10 caractères
+                   </small>
+               </div>
+                
             </section>
             <div class="text-right mt-5">
                 <button class="btn btn-primary" type=submit>Valider</button>
