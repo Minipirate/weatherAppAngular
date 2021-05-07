@@ -1,1 +1,33 @@
-<p>indicator-weather works!</p>
+<div class="d-flex justify-content-between">
+    <div
+     *ngFor='let date of myDates; let i=index;'
+      class="card"
+      style="width: 29%; border-radius: 0.2em"
+    >
+      <div style="text-align: center">
+        <p style="font-weight: bold">{{ myDays[i] }}</p>
+        <!--
+            <div
+          style="
+            margin: 1em;
+            background-color: green;
+            border-radius: 0.2em;
+            color: white;
+            font-weight: bold; 
+          "
+        >
+          <p>9</p>
+        </div>
+        -->
+        
+        <div>
+          <i class="fa fa-cloud" aria-hidden="true"></i>
+          <div>
+            <p>Jour : {{ previsionDatas[date]?.datas[0]?.value }} C</p>
+            <p>Nuit : {{ previsionDatas[date]?.datas[1]?.value }} C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
