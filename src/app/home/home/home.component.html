@@ -1,14 +1,14 @@
 <div class="container-fluid">
   <div class="mapIndicator" style="margin-bottom: 10%;">
     <div class="row" style="margin-bottom: 1em">
-      <div class="col-md-3">
-        <h5>Meteo et Qualite de l'air chez moi</h5>
+      <div class="col-md-5">
+        <h3>Meteo et Qualite de l'air chez moi</h3>
       </div>
-      <div class="col-md-4">
-        <button type="button" class="btn btn-primary">Voir plus</button>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-primary" style="font-size:x-small; margin-top: 3%;">Voir plus</button>
       </div>
-      <div class="col-md-4" style="text-align: right; padding: 0px">
-        <p>Londres - Jeudi 18/03/2020 a 15h00</p>
+      <div class="col-md-5" style="text-align: right; padding: 0px">
+        <p>{{currentCity}}, {{ currentDay }} {{ townDatas[0]?.dateHour }}</p>
       </div>
     </div>
     <div class="row">
