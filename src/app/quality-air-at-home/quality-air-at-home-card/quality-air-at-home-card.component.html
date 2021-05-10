@@ -1,6 +1,6 @@
 <div class="card-group indicator-top">
   <div class="card">
-    <div class="card-top">
+    <div class="card-top" [ngStyle]="{'background-color': backgroundColor}">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="4em"
@@ -28,17 +28,19 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-top">
+    <div class="card-top" [ngStyle]="{'background-color': backgroundColor}">
       <div class="indice">
-        <h5>31 IQA US</h5>
+        <h5>{{ currentDayData[0]?.airQualityDatas[0].value }} IQA</h5>
       </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-top">
+    <div class="card-top" [ngStyle]="{'background-color': backgroundColor}"> 
       <div class="indice indice-ecrit">
         <p class="text-card">Bon</p>
-        <p class="text-card">O3 | 76.9 µg/m³</p>
+        <div style="background-color: white; border-radius: 0.5em;">
+          <p class="text-card">{{ currentDayData[0]?.airQualityDatas[highestPollutant].name.toUpperCase() }} | {{ currentDayData[0]?.airQualityDatas[highestPollutant].value }} µg/m³</p>
+        </div>
       </div>
     </div>
   </div>

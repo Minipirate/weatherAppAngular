@@ -33,8 +33,14 @@ export class DataAccessService {
     // TODO
   }
 
-  getDataByCityNameForPastDays() {
-    // TODO
+  /**
+   * Effectue une requete HTTP dans notre API Back-End. 
+   * Si reussite retourne les donnees Meteo et Qualite d'air correspondantes a une ville donnee en parametre pour les X derniers jours.  
+   * @param city @param nbDays
+   * @returns An array of TownDatas for a given number of days and a given city 
+   */
+  getDataByCityNameForPastDays(city: string, nbDays: number) {
+    return this.http.get<TownData[]>(this.url + 'town/datas?city=' + city + '&days=' + nbDays)
   }
 
   /**

@@ -4,14 +4,14 @@
       <div class="col-md-6">
         <div class="row" style="margin-bottom: 2em">
           <h5>Qualité de l'air chez moi - Détails</h5>
-          <h6>Montpellier - Jeudi 18/03/2020 à 14h00</h6>
+          <h6>{{ currentCity }} - {{ dayOfTheWeek }} {{ currentDayData[0]?.dateHour }}</h6>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
-        <app-quality-air-at-home-card></app-quality-air-at-home-card>
+        <app-quality-air-at-home-card [currentDayData]='currentDayData'></app-quality-air-at-home-card>
       </div>
       <div class="col-md-6">
         <app-quality-air-at-home-pollutants></app-quality-air-at-home-pollutants>
