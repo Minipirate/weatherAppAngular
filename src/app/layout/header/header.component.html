@@ -17,10 +17,15 @@
                 <a class="navSpacing navEffects" routerLink="/forum" (click)="Activate('forum')"
                     [ngClass]="{'activeLink' : isActive.indexOf('forum') != -1}">Forum</a>
             </li>
-            <li class="liSpacing linkVisual spaceBeetweenLink">
+            <li *ngIf="isUserLoggedIn" class="liSpacing linkVisual spaceBeetweenLink">
                 <a class="navSpacing navEffects" routerLink="connection" (click)="Activate('connexion')"
                     [ngClass]="{'activeLink' : isActive.indexOf('connexion') != -1}">Connexion</a>
             </li>
+            <li *ngIf="isUserLoggedIn" class="liSpacing linkVisual spaceBeetweenLink" >
+                <a class="navSpacing navEffects" routerLink="" (click)="logout()"
+                    [ngClass]="{'activeLink' : isActive.indexOf('logout') != -1}" >Logout</a>
+            </li>
         </ul>
+        
     </section>
 </nav>
