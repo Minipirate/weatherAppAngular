@@ -24,6 +24,7 @@ import { MessageEditModule } from './message-edit/message-edit.module';
 import { RegistrationModule } from './registration/registration.module';
 import { WeatherregionModule } from './weatherregion/weatherregion.module';
 import { ConnectionModule } from './connection/connection.module';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -71,7 +72,7 @@ import { ConnectionModule } from './connection/connection.module';
     // ----- FORUM -----
     ConnectionModule  
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

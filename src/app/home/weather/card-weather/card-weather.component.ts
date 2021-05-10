@@ -9,6 +9,7 @@ import { TownData } from 'src/app/model/TownData';
 export class CardWeatherComponent implements OnInit {
 
   @Input() townDatas: any = {} as TownData
+  backgroundColor: any
   highestPolluant: any
 
   constructor() { }
@@ -19,6 +20,7 @@ export class CardWeatherComponent implements OnInit {
 
   ngOnChanges() {
     this.findHighestPolluant()
+    this.findBackgroundColor()
   }
 
   findHighestPolluant() {
@@ -31,6 +33,16 @@ export class CardWeatherComponent implements OnInit {
     for (let i = 2; i < airQualityDatas.length; i++) {  
       if (airQualityDatas[i].value > highestValue) this.highestPolluant = i
     }
+  }
+
+  // Definit le background colore des cards en fonction de la qualite de l'air
+  findBackgroundColor() { 
+    if(this.townDatas[0]?.airQualityDatas[0]?.value === undefined) return 
+
+    let indice = this.townDatas[0]?.airQualityDatas[0]?.value
+    if(indice > 0 && indice < 51) this.backgroundColor = '#A8E05F'
+    else if (indice > 50 && indice < 101) this.backgroundColor = '#FDD64B'
+    else if (indice > 100) this.backgroundColor = '#FE6A69'
   }
 
 }

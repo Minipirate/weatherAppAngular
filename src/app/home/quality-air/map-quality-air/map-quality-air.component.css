@@ -1,5 +1,9 @@
 .map {
-    background-color: green;
-    height: 20em;
+    height: 145%;
 }
+
+#OpenMap {
+    height: 100%;
+    width: 100%;
+  }
 

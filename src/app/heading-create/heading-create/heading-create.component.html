@@ -4,15 +4,23 @@
         <form class="spacingContainer" (ngSubmit)="saveHeading(form)" #form="ngForm">
             <section class="form-group">
                 <label for="formGroupExampleInput">Nom de la rubrique</label>
+                <input type="text" class="form-control" name="headingTitle" #headingInput="ngModel" ngModel name="title"
+                [ngClass]="{'is-invalid' : form.submitted && (headingInput.errors?.required || headingInput.errors?.minlength)}" 
+                minlength=5  required>
 
-                <input #heading="ngModel" ngModel name="title" type="text" 
-                [ngClass]="{'is-invalid' : form.submitted && heading.errors?.required}" 
-                class="form-control" placeholder="Métélogie...." required>
+                <div *ngIf="form.submitted && headingInput.invalid">
+                     <!--Message si le champ est vide -->
+                    <small class="form-text text-danger" *ngIf="headingInput.errors?.required">
+                        Le nom de rubrique ne peut pas être vide
+                    </small>
+                    <!--Message si le champs n'a pa au moin 5 caractères -->
+                    <small class="form-text text-danger" *ngIf="headingInput.errors?.minlength">
+                        La rubrique doit contenir au moin 5 caractères
+                    </small>
+                </div>
+               
                 
-                <!--Message si le champ est vide -->
-                <small class="invalid-feedback" *ngIf="form.submitted && heading.errors?.required">
-                    Le nom de rubrique ne peut pas être vide
-                </small>
+
 
             </section>
             <div class="text-right mt-5">
