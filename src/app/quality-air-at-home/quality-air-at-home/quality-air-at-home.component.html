@@ -14,7 +14,7 @@
         <app-quality-air-at-home-card [currentDayData]='currentDayData'></app-quality-air-at-home-card>
       </div>
       <div class="col-md-6">
-        <app-quality-air-at-home-pollutants></app-quality-air-at-home-pollutants>
+        <app-quality-air-at-home-pollutants [currentDayData]='currentDayData'></app-quality-air-at-home-pollutants>
       </div>
   </div>
 
@@ -22,7 +22,7 @@
     <div class="col-md-10">
       <div class="" style="margin-top: 6em"></div>
         <div class="quality-air-at-home-pollutantslist">
-          <app-quality-air-at-home-pollutantslist></app-quality-air-at-home-pollutantslist>
+          <app-quality-air-at-home-pollutantslist [qualityAirData]='qualityAirData'></app-quality-air-at-home-pollutantslist>
         </div>
     </div>
   </div>

@@ -17,7 +17,6 @@ export class QualityAirAtHomeCardComponent implements OnInit {
   }
 
   ngOnChanges() {
-    console.log(this.currentDayData);
     this.findHighestPolluant()
     this.findBackgroundColor()
   }

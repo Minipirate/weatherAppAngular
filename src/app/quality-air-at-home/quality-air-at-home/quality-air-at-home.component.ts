@@ -16,7 +16,6 @@ export class QualityAirAtHomeComponent implements OnInit {
   currentDayForData: any
   qualityAirData: any
 
-
   constructor(private dataAccess: DataAccessService, private datePipe: DatePipe, private pService: PrevisionService) { 
   }
 
@@ -30,6 +29,5 @@ export class QualityAirAtHomeComponent implements OnInit {
     this.qualityAirData = await this.dataAccess.getDataByCityNameForPastDays(this.currentCity, 7).toPromise() 
     this.currentDayForData = this.datePipe.transform(new Date(), "dd-MM-yyyy")
     this.currentDayData = this.qualityAirData[this.currentDayForData]
-    console.log(this.qualityAirData)
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quality-air-at-home-pollutantslist',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QualityAirAtHomePollutantslistComponent implements OnInit {
 
+  @Input() qualityAirData: any
+  greatArrayOfData: any[] = []
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges() {
+    console.log(this.qualityAirData)
+  }
+
+  makeGreatArrayAgain() {
+    
   }
 
 }

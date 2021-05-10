@@ -2,9 +2,9 @@
   <div class="card-body">
     <h5 class="card-title">Polluants</h5>
 
-    <div class="row">
+    <div class="row" *ngFor="let data of smallerCurrentDayData">
       <div class="col-md-3">
-        <div class="PM 2.5">PM 2.5</div>
+        <div class="PM 2.5">{{ data.name.toUpperCase() }}</div>
       </div>
 
       <div class="col-md-6">
@@ -20,74 +20,6 @@
       </div>
 
       <div class="col-md-3">
-        <div class="/m3">18 µg/m³</div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-md-3">
-        <div class="PM 10">PM 10</div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="progress" style="width: 100%">
-          <div
-            class="progressbar bg-info"
-            aria-valuenow="60"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style="width: 30%"
-          ></div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="/m3">18 µg/m³</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3">
-        <div class="O3">O3</div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="progress" style="width: 100%">
-          <div
-            class="progressbar bg-info"
-            aria-valuenow="60"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style="width: 80%"
-          ></div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="/m3">76 µg/m³</div>
-      </div>
-    </div>
-    
-
-    <div class="row">
-      <div class="col-md-3">
-        <div class="NO2">NO2</div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="progress" style="width: 100%">
-          <div
-            class="progressbar bg-info"
-            aria-valuenow="60"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style="width: 30%"
-          ></div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="/m3">18 µg/m³</div>
+        <div class="/m3">{{ data.value | number: '1.0-0' }} µg/m³</div>
       </div>
     </div>
