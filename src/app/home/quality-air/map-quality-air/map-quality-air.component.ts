@@ -19,10 +19,11 @@ export class MapQualityAirComponent implements OnInit {
 
   constructor() { }
 
+  // TODO: Ajouter des layers pour display les informations sur la qualite de l'air  
   ngOnInit(): void {
     this.map = new Map({
       target: 'OpenMap',
-      layers: [
+      layers: [  // <========================================== Juste ICI
         new TileLayer({
           source: new OSM()
         })
